@@ -1,0 +1,222 @@
+<template>
+    <div class="exchange">
+        <div class="container">
+            <div class="exchange__body">
+                <div class="exchange__marquee">
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="exchange-gold-1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-gold" id="exchange-gold-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="exchange-silver-1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-silver" id="exchange-silver-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="exchange-platinum-1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-platinum" id="exchange-platinum-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="exchange-usd-1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-usd" id="exchange-usd-arrow-1"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="exchange-eur-1">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-eur" id="exchange-eur-arrow-1"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="exchange-gold-2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-gold" id="exchange-gold-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="exchange-silver-2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-silver" id="exchange-silver-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="exchange-platinum-2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-platinum" id="exchange-platinum-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="exchange-usd-2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-usd" id="exchange-usd-arrow-2"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="exchange-eur-2">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-eur" id="exchange-eur-arrow-2"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="exchange-line">
+                        <span class="exchange__title">
+                            Биржевые индексы:
+                        </span>
+                        <ul class="exchange__list">
+                            <li class="exchange__item">
+                                Золото: <span class="exchange__val" id="exchange-gold-3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-gold" id="exchange-gold-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Серебро: <span class="exchange__val" id="exchange-silver-3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-silver" id="exchange-silver-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Платина: <span class="exchange__val" id="exchange-platinum-3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-platinum" id="exchange-platinum-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Доллар: <span class="exchange__val" id="exchange-usd-3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-usd" id="exchange-usd-arrow-3"></span>
+                            </li>
+                            <li class="exchange__item">
+                                Евро: <span class="exchange__val" id="exchange-eur-3">--</span>
+                                <span class="exchange__item-arrow exchange__item-arrow-eur" id="exchange-eur-arrow-3"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /.exchange -->
+
+    <div class="header">
+        
+        <div class="container header-inner">
+            <div class="header-logo">
+                <img class="header-logo-img" src="https://dmitriyraspel.github.io/demo_gold_tech/img/GT_Market_logo.png" alt="GoldTechMarket-logo">
+            </div>
+
+            <div class="header-inner-right">
+                <ul class="header-links">
+                    <li class="not-mobile">
+                        <a href="#" class="ico-account"></a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- /.header-inner -->
+    </div><!-- /.header -->
+
+    
+</template>
+
+<script>
+export default {
+    name: "g-header",
+    props: {},
+    data() {
+        return {}
+    },
+    computed: {},
+}
+</script>
+
+<style>
+/* exchange */
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+.exchange {
+    background: #C39B6A;
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.exchange__body {
+    position: relative;
+}
+.exchange__marquee {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    overflow: hidden;
+}
+.exchange__title {
+    display: inline-block;
+    margin-right: 50px;
+    opacity: .7;
+}
+.exchange__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+.exchange__item {
+    display: inline-block;
+    margin-right: 50px;
+    opacity: .7;
+    padding-right: 19px;
+    position: relative;
+}
+.exchange-line {
+    display: inline-block;
+    animation: marquee 35.6s linear infinite;
+}
+
+.header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+.header-logo {
+    margin: 0 15px 0 0;
+    max-width: calc(100% - 120px);
+}
+.header-logo-img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 45px;
+    opacity: 1;
+}
+.header-inner-right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.header-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header-links li {
+    position: relative;
+    padding: 0;
+    width: 36px;
+    height: 36px;
+}
+.ico-account::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    left: 6px;
+    position: absolute;
+    background: url(https://dmitriyraspel.github.io/demo_gold_tech/img/user_24-24.png) center no-repeat;
+    background-size: contain;
+}
+</style>
