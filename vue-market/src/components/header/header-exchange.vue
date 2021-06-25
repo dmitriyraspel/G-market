@@ -194,4 +194,10 @@ export default {
   display: inline-block;
   animation: marquee 35.6s linear infinite;
 }
+.container {
+  width: 90%;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
