@@ -43,12 +43,18 @@
         </a>
       </div>
     </div>
+    <g-cart-popup/>
   </div>
 </template>
 
 <script>
+import gCartPopup from '../catalog/g-cart-popup.vue'
+
 export default {
   name: "fix-menu-wrap",
+  components: {
+    gCartPopup
+  }
 };
 </script>
 
