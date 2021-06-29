@@ -5,132 +5,19 @@
         <div class="exchange__marquee">
           <div class="exchange-line">
             <span class="exchange__title"> Биржевые индексы: </span>
-            <ul class="exchange__list">
-              <li class="exchange__item">
-                Золото:
-                <span class="exchange__val" id="exchange-gold-1">--</span>
+            <ul class="exchange__list" v-for="i in 3" :key="i">
+              <li
+                class="exchange__item"
+                v-for="(t, tIndex) in tickers"
+                :key="tIndex"
+              >
+                {{ tickerNames[t.acronim] }}
+                <span class="exchange__val" id="exchange-gold-1">{{
+                  t.buy
+                }}</span>
                 <span
                   class="exchange__item-arrow exchange__item-arrow-gold"
                   id="exchange-gold-arrow-1"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Серебро:
-                <span class="exchange__val" id="exchange-silver-1">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-silver"
-                  id="exchange-silver-arrow-1"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Платина:
-                <span class="exchange__val" id="exchange-platinum-1">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-platinum"
-                  id="exchange-platinum-arrow-1"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Доллар:
-                <span class="exchange__val" id="exchange-usd-1">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-usd"
-                  id="exchange-usd-arrow-1"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Евро: <span class="exchange__val" id="exchange-eur-1">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-eur"
-                  id="exchange-eur-arrow-1"
-                ></span>
-              </li>
-            </ul>
-          </div>
-          <div class="exchange-line">
-            <span class="exchange__title"> Биржевые индексы: </span>
-            <ul class="exchange__list">
-              <li class="exchange__item">
-                Золото:
-                <span class="exchange__val" id="exchange-gold-2">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-gold"
-                  id="exchange-gold-arrow-2"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Серебро:
-                <span class="exchange__val" id="exchange-silver-2">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-silver"
-                  id="exchange-silver-arrow-2"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Платина:
-                <span class="exchange__val" id="exchange-platinum-2">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-platinum"
-                  id="exchange-platinum-arrow-2"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Доллар:
-                <span class="exchange__val" id="exchange-usd-2">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-usd"
-                  id="exchange-usd-arrow-2"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Евро: <span class="exchange__val" id="exchange-eur-2">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-eur"
-                  id="exchange-eur-arrow-2"
-                ></span>
-              </li>
-            </ul>
-          </div>
-          <div class="exchange-line">
-            <span class="exchange__title"> Биржевые индексы: </span>
-            <ul class="exchange__list">
-              <li class="exchange__item">
-                Золото:
-                <span class="exchange__val" id="exchange-gold-3">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-gold"
-                  id="exchange-gold-arrow-3"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Серебро:
-                <span class="exchange__val" id="exchange-silver-3">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-silver"
-                  id="exchange-silver-arrow-3"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Платина:
-                <span class="exchange__val" id="exchange-platinum-3">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-platinum"
-                  id="exchange-platinum-arrow-3"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Доллар:
-                <span class="exchange__val" id="exchange-usd-3">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-usd"
-                  id="exchange-usd-arrow-3"
-                ></span>
-              </li>
-              <li class="exchange__item">
-                Евро: <span class="exchange__val" id="exchange-eur-3">--</span>
-                <span
-                  class="exchange__item-arrow exchange__item-arrow-eur"
-                  id="exchange-eur-arrow-3"
                 ></span>
               </li>
             </ul>
@@ -142,27 +29,49 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 export default {
-  name: "header-exchange",
+  name: 'header-exchange',
+  data: () => ({
+    tickerNames: {
+      USD: 'Доллар',
+      EUR: 'Евро',
+      XAU: 'Золото',
+      PL: 'Платинф',
+      XAG: 'Серебро',
+    },
+  }),
+  mounted() {
+    this.fetchTickers();
+  },
+  methods: {
+    ...mapActions(['fetchTickers']),
+  },
+  computed: {
+    ...mapGetters({
+      tickers: 'tickers',
+    }),
+  },
 };
 </script>
 
 <style lang="scss">
 @keyframes marquee {
-    0% {
-        transform: translate(0, 0);
-    }
-    100% {
-        transform: translate(-100%, 0);
-    }
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
 }
 .header-exchange {
   background: #c39b6a;
   color: #fff;
   font-size: 12px;
   padding: 6px 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 .exchange__body {
   position: relative;
