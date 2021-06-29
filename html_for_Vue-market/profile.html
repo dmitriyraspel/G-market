@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile for vue-market</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="exchange">
+      <div class="container">
+        <div class="exchange__body">
+          <div class="exchange__marquee">
+            <div class="exchange-line">
+              <span class="exchange__title">
+                Биржевые индексы:
+              </span>
+              <ul class="exchange__list">
+                <li class="exchange__item">
+                  Золото: <span class="exchange__val" id="exchange-gold-1">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-gold" id="exchange-gold-arrow-1"></span>
+                </li>
+                <li class="exchange__item">
+                  Серебро: <span class="exchange__val" id="exchange-silver-1">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-silver" id="exchange-silver-arrow-1"></span>
+                </li>
+                <li class="exchange__item">
+                  Платина: <span class="exchange__val" id="exchange-platinum-1">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-platinum"
+                    id="exchange-platinum-arrow-1"></span>
+                </li>
+                <li class="exchange__item">
+                  Доллар: <span class="exchange__val" id="exchange-usd-1">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-usd" id="exchange-usd-arrow-1"></span>
+                </li>
+                <li class="exchange__item">
+                  Евро: <span class="exchange__val" id="exchange-eur-1">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-eur" id="exchange-eur-arrow-1"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="exchange-line">
+              <span class="exchange__title">
+                Биржевые индексы:
+              </span>
+              <ul class="exchange__list">
+                <li class="exchange__item">
+                  Золото: <span class="exchange__val" id="exchange-gold-2">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-gold" id="exchange-gold-arrow-2"></span>
+                </li>
+                <li class="exchange__item">
+                  Серебро: <span class="exchange__val" id="exchange-silver-2">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-silver" id="exchange-silver-arrow-2"></span>
+                </li>
+                <li class="exchange__item">
+                  Платина: <span class="exchange__val" id="exchange-platinum-2">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-platinum"
+                    id="exchange-platinum-arrow-2"></span>
+                </li>
+                <li class="exchange__item">
+                  Доллар: <span class="exchange__val" id="exchange-usd-2">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-usd" id="exchange-usd-arrow-2"></span>
+                </li>
+                <li class="exchange__item">
+                  Евро: <span class="exchange__val" id="exchange-eur-2">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-eur" id="exchange-eur-arrow-2"></span>
+                </li>
+              </ul>
+            </div>
+            <div class="exchange-line">
+              <span class="exchange__title">
+                Биржевые индексы:
+              </span>
+              <ul class="exchange__list">
+                <li class="exchange__item">
+                  Золото: <span class="exchange__val" id="exchange-gold-3">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-gold" id="exchange-gold-arrow-3"></span>
+                </li>
+                <li class="exchange__item">
+                  Серебро: <span class="exchange__val" id="exchange-silver-3">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-silver" id="exchange-silver-arrow-3"></span>
+                </li>
+                <li class="exchange__item">
+                  Платина: <span class="exchange__val" id="exchange-platinum-3">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-platinum"
+                    id="exchange-platinum-arrow-3"></span>
+                </li>
+                <li class="exchange__item">
+                  Доллар: <span class="exchange__val" id="exchange-usd-3">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-usd" id="exchange-usd-arrow-3"></span>
+                </li>
+                <li class="exchange__item">
+                  Евро: <span class="exchange__val" id="exchange-eur-3">--</span>
+                  <span class="exchange__item-arrow exchange__item-arrow-eur" id="exchange-eur-arrow-3"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container header-inner">
+      <div class="header-logo">
+        <a href="/home.html" class="logo-link">
+          <img class="header-logo-img" src="https://dmitriyraspel.github.io/demo_gold_tech/img/GT_Market_logo.png"
+            alt="GoldTechMarket-logo">
+        </a>
+      </div>
+
+      <div class="header-inner-right">
+        <ul class="header-links">
+          <li class="not-mobile">
+            <a href="/profile.html" class="ico-account"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="fix-menu-wrap">
+    <div class="fix-menu">
+
+      <div class="fix-menu__item">
+        <a
+          href="/catalog.html"
+          class="fix-menu__link fix-menu__link-catalog slide-nav-toggle"
+          aria-controls="slide-nav"
+          aria-expanded="false">
+          <span class="fix-menu__title">Каталог</span>
+        </a>
+      </div>
+      
+      <div class="fix-menu__item">
+        <a href="/login.html" class="fix-menu__link fix-menu__link-charts">
+          <span class="fix-menu__title">Login</span>
+        </a>
+      </div>
+      
+      <div class="fix-menu__item">
+        <a href="/home.html" class="fix-menu__link fix-menu__link-home">
+          <span class="fix-menu__title">Главная</span>
+        </a>
+      </div>
+
+      <div class="fix-menu__item">
+        <a
+          id="fixcartlink"
+          href="/cart.html"
+          class="fix-menu__link fix-menu__link-cart"
+        >
+          <span class="fix-menu__title">Корзина</span>
+          <span class="cart-qty">4</span>
+        </a>
+      </div>
+
+      <div class="fix-menu__item only-mobile">
+        <a href="/profile.html" class="fix-menu__link fix-menu__link-account">
+          <span class="fix-menu__title">Профиль</span>
+        </a>
+      </div>
+
+      <div class="fix-menu__item not-mobile">
+        <a href="/register.html" class="fix-menu__link fix-menu__link-wishlist">
+          <span class="fix-menu__title">Регистрация</span>
+          <span class="wishlist-qty">3</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
