@@ -31,7 +31,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 export default {
-  name: 'header-exchange',
+  name: 'g-ticker',
   data: () => ({
     tickerNames: {
       USD: 'Доллар',

@@ -1,6 +1,8 @@
 <template>
   <div class="g-home">
-    <g-header/>
+    <g-header>
+      <g-ticker/>
+    </g-header>
     <g-catalog-wrapper/>
     <g-fix-menu-wrap/>
   <g-customer/>
@@ -10,6 +12,7 @@
 
 <script>
 import gHeader from '@/components/header/g-header.vue'
+import gTicker from '@/components/g-ticker.vue'
 import gCatalogWrapper from '@/components/g-catalog-wrapper.vue'
 import fixMenuWrap from '@/components/fix-menu/g-fix-menu-wrap.vue'
 import gCustomer from '@/components/customer/g-customer.vue'
@@ -17,6 +20,7 @@ export default {
   name: 'Home',
   components: {
     'g-header': gHeader,
+    'g-ticker': gTicker,
     'g-catalog-wrapper':gCatalogWrapper,
     'g-customer': gCustomer,
     'g-fix-menu-wrap': fixMenuWrap

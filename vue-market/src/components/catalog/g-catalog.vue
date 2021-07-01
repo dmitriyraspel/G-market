@@ -1,23 +1,31 @@
-<template>
+<template #catalog>
   <div class="g-catalog">
     <h2 class="g-catalog-title">catalog</h2>
-    <g-catalog-item/>
-    <g-catalog-item/>
-    <g-catalog-item/>
-    <g-catalog-item/>
-    <g-catalog-item/>
-    <g-catalog-item/>
-    <g-catalog-item/>   
+    <g-catalog-item 
+      v-for="(item, itemIndex) in catalog" 
+      :key="itemIndex"
+      :item="item"
+    />   
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 import gCatalogItem from './g-catalog-item.vue'
 
 export default {
   name: 'g-catalog',
   components: {
     gCatalogItem
+  },
+  created() {
+    this.fetchCatalog()
+  },
+  methods: {
+    ...mapActions(['fetchCatalog'])
+  },
+  computed: {
+    ...mapGetters(['catalog'])
   }
 }
 </script>

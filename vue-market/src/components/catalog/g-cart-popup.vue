@@ -1,5 +1,5 @@
 <template>
-  <div class="g-cart-popup">
+  <div class="g-cart-popup" v-if="cartPopUpVisible">
       <div class="g-cart-popup-header">
         <span class="g-cart-popup-header-title">Товары (4)</span>
         <span class="g-cart-popup-header-remove-all">Очистить список</span>
@@ -19,12 +19,15 @@
 <script>
 import gCartItem from './g-cart-item.vue'
 import gCartTotal from './g-cart-total.vue'
-
+import { mapGetters } from 'vuex'
 export default {
   name: 'g-cart-popup',
   components: {
     gCartItem,
     gCartTotal
+  },
+  computed: {
+    ...mapGetters(['cartPopUpVisible'])
   }
 }
 </script>

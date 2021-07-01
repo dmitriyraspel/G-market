@@ -14,7 +14,7 @@ const actions = {
   async fetchCatalog({ commit }) {
     try {
       const catalog = await getCatalog()
-      commit("SET_TICKER", catalog)
+      commit("SET_CATALOG", catalog)
     } catch (error) {
       console.log(error)
     }
