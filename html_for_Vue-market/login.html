@@ -138,47 +138,151 @@
 
     <div class="fix-menu-wrap">
         <div class="fix-menu">
-
-            <div class="fix-menu__item">
-                <a href="/catalog.html" class="fix-menu__link fix-menu__link-catalog slide-nav-toggle"
-                    aria-controls="slide-nav" aria-expanded="false">
-                    <span class="fix-menu__title">Каталог</span>
-                </a>
-            </div>
-
-            <div class="fix-menu__item">
-                <a href="/login.html" class="fix-menu__link fix-menu__link-charts">
-                    <span class="fix-menu__title">Login</span>
-                </a>
-            </div>
-
-            <div class="fix-menu__item">
-                <a href="/home.html" class="fix-menu__link fix-menu__link-home">
-                    <span class="fix-menu__title">Главная</span>
-                </a>
-            </div>
-
-            <div class="fix-menu__item">
-                <a id="fixcartlink" href="/cart.html" class="fix-menu__link fix-menu__link-cart">
-                    <span class="fix-menu__title">Корзина</span>
-                    <span class="cart-qty">4</span>
-                </a>
-            </div>
-
-            <div class="fix-menu__item only-mobile">
-                <a href="/profile.html" class="fix-menu__link fix-menu__link-account">
-                    <span class="fix-menu__title">Профиль</span>
-                </a>
-            </div>
-
-            <div class="fix-menu__item not-mobile">
-                <a href="/register.html" class="fix-menu__link fix-menu__link-wishlist">
-                    <span class="fix-menu__title">Регистрация</span>
-                    <span class="wishlist-qty">3</span>
-                </a>
-            </div>
+    
+          <div class="fix-menu__item">
+            <a href="/catalog.html" class="fix-menu__link fix-menu__link-catalog slide-nav-toggle" aria-controls="slide-nav"
+              aria-expanded="false">
+              <span class="fix-menu__title">Каталог</span>
+            </a>
+          </div>
+    
+          <div class="fix-menu__item">
+            <a href="/login.html" class="fix-menu__link fix-menu__link-charts">
+              <span class="fix-menu__title">Login</span>
+            </a>
+          </div>
+    
+          <div class="fix-menu__item">
+            <a href="/home.html" class="fix-menu__link fix-menu__link-home">
+              <span class="fix-menu__title">Главная</span>
+            </a>
+          </div>
+    
+          <div class="fix-menu__item fix-menu__item-cart-popup">
+            <a id="fixcartlink" href="/cart.html" class="fix-menu__link fix-menu__link-cart">
+              <span class="fix-menu__title">Корзина</span>
+              <span class="cart-qty">4</span>
+            </a>
+          </div>
+    
+          <div class="fix-menu__item only-mobile">
+            <a href="/profile.html" class="fix-menu__link fix-menu__link-account">
+              <span class="fix-menu__title">Профиль</span>
+            </a>
+          </div>
+    
+          <div class="fix-menu__item not-mobile">
+            <a href="/register.html" class="fix-menu__link fix-menu__link-wishlist">
+              <span class="fix-menu__title">Регистрация</span>
+              <span class="wishlist-qty">3</span>
+            </a>
+          </div>
         </div>
-    </div>
+    
+        <div class="cart-popup ">
+          <div class="cart-group-wrapper">
+            <div class="cart-group__header">
+              <span class="cart-group__title">Товары </span>
+              <span class="cart-group__qty">(3)</span>
+              <span class="cart-group__remove-all">Очистить список</span>
+            </div>
+            <hr>
+            <div class="cart-group">
+    
+              <div class="cart-product">
+                <div class="cart-product__img-wrapper">
+                  <img src="https://goldconnect.online/images/coins/nugget-kangaroo-gold-coin-1.2oz_2021_1.png" alt=""
+                    class="cart-product__img">
+                </div>
+                <div class="cart-product__info">
+                  <div class="cart-product__name">
+                    nugget-kangaroo-gold-coin-1.2oz_2021
+                  </div>
+                  <div class="cart-product__qty">
+                    <input class="product__qty-number" type="number" name="">
+                  </div>
+                  <div class="cart-product__price">
+                    <span>61 768</span>
+                    <span class="font-normal">₽</span>
+                  </div>
+                  <div class="cart-product__delete">
+                    <a href="" class="btn-icon btn-icon__delete"></a>
+                  </div>
+                </div>
+              </div> <!-- cart-product -->
+    
+              <div class="cart-product">
+                <div class="cart-product__img-wrapper">
+                  <img src="https://goldconnect.online/images/coins/nugget-kangaroo-gold-coin-1.2oz_2021_1.png" alt=""
+                    class="cart-product__img">
+                </div>
+                <div class="cart-product__info">
+                  <div class="cart-product__name">
+                    nugget-kangaroo-gold-coin-1.2oz_2021
+                  </div>
+                  <div class="cart-product__qty">
+                    <input class="product__qty-number" type="number" name="">
+                  </div>
+                  <div class="cart-product__price">
+                    <span>1 161 768</span>
+                    <span class="font-normal">₽</span>
+                  </div>
+                  <div class="cart-product__delete">
+                    <a href="" class="btn-icon btn-icon__delete"></a>
+                  </div>
+                </div>
+              </div> <!-- cart-product -->
+    
+              <div class="cart-product">
+                <div class="cart-product__img-wrapper">
+                  <img src="https://goldconnect.online/images/coins/nugget-kangaroo-gold-coin-1.2oz_2021_1.png" alt=""
+                    class="cart-product__img">
+                </div>
+                <div class="cart-product__info">
+                  <div class="cart-product__name">
+                    nugget-kangaroo-gold-coin-1.2oz_2021
+                  </div>
+                  <div class="cart-product__qty">
+                    <input class="product__qty-number" type="number" name="">
+                  </div>
+                  <div class="cart-product__price">
+                    <span>161 768</span>
+                    <span class="font-normal">₽</span>
+                  </div>
+                  <div class="cart-product__delete">
+                    <a href="" class="btn-icon btn-icon__delete"></a>
+                  </div>
+                </div>
+              </div> <!-- cart-product -->
+    
+            </div>
+            <!-- cart-group -->
+          </div><!-- /.cart-group-wrapper -->
+    
+          
+            <div class="cart-popup__footer">
+              <div class="cart-summary">
+                <span>Итого:</span>
+                <div class="cart-summary__value">2 137 560 ₽</div>
+              </div>
+              <hr>
+              <div class="cart-popup__footer-buttons">
+                <a id="cart-popup__checkout" 
+                  href="#" 
+                  class="button"
+                >Оформить заказ</a>
+    
+                <a id="cart-popup__to-cart" 
+                  href="#" 
+                  class="button button__primary"
+                >В корзину</a>
+              </div>
+    
+            </div><!-- cart-popup__footer -->
+    
+        </div>
+    
+      </div><!-- fix-menu-wrap -->
 
     <div class="auth empty-layout background-dark">
         <div class="container text-container">
