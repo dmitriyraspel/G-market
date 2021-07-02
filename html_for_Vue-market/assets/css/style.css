@@ -1136,7 +1136,7 @@ select::-ms-expand {
   margin: 0 auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
   .colorbox {
     width: 28%;
   }
@@ -1187,7 +1187,35 @@ select::-ms-expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 760px) {
+  .cart-product {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+.cart-product__img-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+}
+
+@media (max-width: 760px) {
+  .cart-product__img-name {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 1em;
+  }
 }
 
 .cart-product__img-wrapper {
@@ -1214,8 +1242,21 @@ select::-ms-expand {
           justify-content: flex-end;
 }
 
+@media (max-width: 760px) {
+  .cart-product__info {
+    width: 100%;
+  }
+}
+
+.cart-product__code {
+  font-size: 10px;
+  padding: 0;
+  margin: 0;
+}
+
 .cart-product__name {
   padding: 0 1em;
+  font-size: 16px;
 }
 
 .cart-product__price {
@@ -1226,7 +1267,6 @@ select::-ms-expand {
   padding: 0 1em;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  width: 150px;
   text-align: end;
 }
 
@@ -1241,6 +1281,7 @@ input[type="number"].product__qty-number {
   border-radius: 2px;
   height: 24px;
   padding: 4px;
+  border-bottom: 1px solid #666;
 }
 
 .cart-summary {
@@ -1323,6 +1364,16 @@ input[type="number"].product__qty-number {
 .cart-popup.active,
 .cart-popup:hover {
   display: block;
+}
+
+.cart__footer-buttons {
+  margin-top: 20px;
+}
+
+.cart__footer-buttons #checkout {
+  background: #C39B6A;
+  color: #fff;
+  font-weight: 700;
 }
 
 .fix-menu-wrap {
@@ -1582,6 +1633,21 @@ input[type="number"].product__qty-number {
   max-width: 90%;
   margin-right: auto;
   margin-bottom: 1em;
+}
+
+.profile-detali-card {
+  padding: 20px 15px;
+  margin-top: 20px;
+  max-width: 400px;
+  text-align: center;
+  -webkit-box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.profile-submit {
+  margin: 0;
 }
 
 .product-tags ul {
@@ -2299,7 +2365,7 @@ input[type="number"].product__qty-number {
   user-drag: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
   .step__image {
     max-width: none;
   }
@@ -2465,7 +2531,7 @@ input[type="number"].product__qty-number {
           flex-direction: column;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
   .footer__inner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -2486,7 +2552,7 @@ input[type="number"].product__qty-number {
   margin-bottom: 1.5rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 760px) {
   .footer__textLogo {
     margin-bottom: 0;
   }
@@ -2694,6 +2760,22 @@ input[type="number"].product__qty-number {
           flex-grow: 1;
 }
 
+.page__main-left,
+.page__main-right {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .page__main-left,
+  .page__main-right {
+    display: block;
+    width: 50%;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+}
+
 .page__main__title {
   font-size: 30px;
 }
@@ -2834,12 +2916,12 @@ input[type="number"].product__qty-number {
   }
   .vMenu a:hover {
     opacity: 1;
-    color: #6C63FF;
+    color: #C39B6A;
   }
   .vMenu a:after {
     display: block;
     content: '';
-    border-bottom: 1px solid #6C63FF;
+    border-bottom: 1px solid #C39B6A;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -2871,7 +2953,7 @@ input[type="number"].product__qty-number {
 }
 
 .vMenu--active {
-  color: #6C63FF;
+  color: #C39B6A;
 }
 
 .vMenu--active:before {
@@ -2882,12 +2964,12 @@ input[type="number"].product__qty-number {
 @media (min-width: 992px) {
   .vMenu--active {
     opacity: 1;
-    color: #6C63FF;
+    color: #C39B6A;
   }
   .vMenu--active:after {
     display: block;
     content: '';
-    border-bottom: 1px solid #6C63FF;
+    border-bottom: 1px solid #C39B6A;
     -webkit-transform: none;
             transform: none;
     -webkit-transition: none;
