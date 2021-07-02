@@ -21,7 +21,7 @@
           <span class="fix-menu__title">Главная</span>
         </a>
       </div>
-      <div class="fix-menu__item" @click="toggleCartPopUp">
+      <div class="fix-menu__item" @mouseover="toggleCartPopUp">
         <a
           id="fixcartlink"
           class="fix-menu__link fix-menu__link-cart"

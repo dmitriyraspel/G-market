@@ -58,10 +58,10 @@ export default {
 <style lang="scss">
 @keyframes marquee {
   0% {
-    transform: translate(0, 0);
+    transform: translate(0%, 0);
   }
   100% {
-    transform: translate(-100%, 0);
+    transform: translate(100%, 0);
   }
 }
 .header-exchange {

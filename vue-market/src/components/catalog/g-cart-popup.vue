@@ -1,7 +1,7 @@
 <template>
   <div class="g-cart-popup" v-if="cartPopUpVisible">
       <div class="g-cart-popup-header">
-        <span class="g-cart-popup-header-title">Товары (4)</span>
+        <span class="g-cart-popup-header-title">Товары ({{ itemsInCart.length }})</span>
         <span class="g-cart-popup-header-remove-all">Очистить список</span>
       </div>
 
@@ -27,7 +27,13 @@ export default {
     gCartTotal
   },
   computed: {
-    ...mapGetters(['cartPopUpVisible'])
+    ...mapGetters(['cartPopUpVisible', 'itemsInCart', 'catalog']),
+    popUpItems() {
+      return this.itemsInCart.forEach(id => {
+         return this.catalog.filter(item => item.id == id)
+      })
+    }
+
   }
 }
 </script>

@@ -10,11 +10,12 @@
     />
     <h3 class="g-catalog-item-name">{{ item.name }}</h3>
     <p class="g-catalog-item-price">{{ item.price }}</p>
-    <button class="add-to-cart" @click="addToCart">Добавить в корзину</button>
+    <button class="add-to-cart" @click="addToCart(item.id)" :disabled="checkIfItemInCart(item.id)">{{ checkIfItemInCart(item.id) ? 'added' : 'Добавить в корзину' }} </button>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
   name: 'g-catalog-item',
   props: {
@@ -22,11 +23,22 @@ export default {
       type: Object,
     },
   },
-  methods: {
-    addToCart() {
+  computed: {
+    ...mapGetters(['itemsInCart']),
 
+  },
+  methods: {
+    ...mapActions(['add_to_cart']),
+    addToCart(id) {
+        this.add_to_cart(id)
+    },
+    checkIfItemInCart(id) {
+      if (this.itemsInCart.includes(id))
+        return true
+      else
+        return false
     }
-  }
+  },
 };
 </script>
 
