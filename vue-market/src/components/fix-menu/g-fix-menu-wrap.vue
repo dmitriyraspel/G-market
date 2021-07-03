@@ -21,13 +21,15 @@
           <span class="fix-menu__title">Главная</span>
         </a>
       </div>
-      <div class="fix-menu__item">
+      <div class="fix-menu__item" @mouseover="toggleCartPopUp">
         <a
           id="fixcartlink"
-          href="/cart"
           class="fix-menu__link fix-menu__link-cart"
         >
-          <span class="fix-menu__title">Корзина</span>
+          <span 
+            class="fix-menu__title" 
+            
+          >Корзина</span>
           <span class="cart-qty">4</span>
         </a>
       </div>
@@ -49,11 +51,17 @@
 
 <script>
 import gCartPopup from '../catalog/g-cart-popup.vue'
-
+import { mapActions } from 'vuex'
 export default {
   name: "fix-menu-wrap",
   components: {
     gCartPopup
+  },
+  methods: {
+    ...mapActions(['toggle_popup']),
+    toggleCartPopUp() {
+      this.toggle_popup()
+    }
   }
 };
 </script>
